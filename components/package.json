@@ -1,6 +1,6 @@
 {
   "name": "@cys4585/react-modal",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "우아한테크코스 6기 FE 미션을 위해 제작된 간단한 모달 컴포넌트입니다.",
   "type": "module",
   "types": "dist/index.d.ts",

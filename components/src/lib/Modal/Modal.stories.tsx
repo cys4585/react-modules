@@ -22,7 +22,7 @@ export const Default: Story = {
 };
 
 export const CenterModal: Story = {
-  args: { ...Default.args, position: 'center' },
+  args: { ...Default.args },
   render: (args) => {
     return (
       <Modal {...args}>
@@ -53,7 +53,7 @@ export const CenterModal: Story = {
 };
 
 export const BottomModal: Story = {
-  args: { ...Default.args, position: 'bottom' },
+  args: { ...Default.args },
   render: (args) => {
     return (
       <Modal {...args}>
@@ -84,7 +84,7 @@ export const BottomModal: Story = {
 };
 
 export const SmallModal: Story = {
-  args: { ...Default.args, size: 'small' },
+  args: { ...Default.args },
   render: (args) => {
     return (
       <Modal {...args}>
@@ -115,7 +115,7 @@ export const SmallModal: Story = {
 };
 
 export const MediumModal: Story = {
-  args: { ...Default.args, size: 'medium' },
+  args: { ...Default.args },
   render: (args) => {
     return (
       <Modal {...args}>
@@ -146,7 +146,7 @@ export const MediumModal: Story = {
 };
 
 export const LargeModal: Story = {
-  args: { ...Default.args, size: 'large' },
+  args: { ...Default.args },
   render: (args) => {
     return (
       <Modal {...args}>

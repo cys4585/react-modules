@@ -35,7 +35,7 @@ function App() {
         onClose={() => setIsOpenCenterModal(false)}
       >
         <Modal.Header
-          title="Center Modal"
+          title="Modal"
           hasCloseButton={true}
           onClose={() => setIsOpenCenterModal(false)}
         />
@@ -59,6 +59,11 @@ function App() {
             </InputCheckBox>
           </Form>
         </Modal.Content>
+        <Modal.Footer>
+          <Modal.Footer.Button onClick={() => setIsOpenCenterModal(false)}>
+            닫기
+          </Modal.Footer.Button>
+        </Modal.Footer>
       </Modal>
     </>
     // <>

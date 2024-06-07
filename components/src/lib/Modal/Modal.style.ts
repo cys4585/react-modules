@@ -42,6 +42,7 @@ export const ModalWrapper = styled.div<ModalWrapperProps>`
   gap: 16px;
 
   max-width: 100%;
+  box-sizing: border-box;
 
   ${(props) => {
     if (props.$position === 'center') {
@@ -55,7 +56,6 @@ export const ModalWrapper = styled.div<ModalWrapperProps>`
       return `
         position: fixed;
         bottom: 0;
-        left: 0;
         width: 100%;
         border-radius: 10px 10px 0 0;
       `;
@@ -65,11 +65,13 @@ export const ModalWrapper = styled.div<ModalWrapperProps>`
   ${(props) => {
     if (props.$position === 'center' && props.$size === 'small') {
       return `
-        width: 320px`;
+        width: 320px
+        `;
     }
     if (props.$position === 'center' && props.$size === 'medium') {
       return `
-        width: 480px`;
+        width: 480px
+      `;
     }
     if (props.$position === 'center' && props.$size === 'large') {
       return `

@@ -40,21 +40,25 @@ function Modal({ isOpen, config, zIndex = ModalZIndex.High, children, onClose }:
   const { position, size } = getDefaultModalConfig(config);
   const modalRef = useRef<HTMLDivElement>(null);
 
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === 'Escape') {
+      onClose();
+    }
+  };
+
   useEffect(() => {
     if (isOpen && modalRef.current) {
       modalRef.current?.focus();
     }
   }, [isOpen]);
 
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+  }, [isOpen]);
+
   if (!isOpen) {
     return;
   }
-
-  const handleKeyDown = (event: React.KeyboardEvent) => {
-    if (event.key === 'Escape') {
-      onClose();
-    }
-  };
 
   return (
     <ModalOverlay
